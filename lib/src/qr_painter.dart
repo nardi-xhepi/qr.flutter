@@ -393,9 +393,21 @@ class QrPainter extends CustomPainter {
     );
 
     if (eyeStyle.eyeShape == QrEyeShape.square) {
-      canvas.drawRect(outerRect, outerPaint);
-      canvas.drawRect(innerRect, innerPaint);
-      canvas.drawRect(dotRect, dotPaint);
+      canvas.drawRRect(
+        RRect.fromRectAndRadius(
+                outerRect,
+                Radius.circular(10.0), // Adjust the radius value as needed
+      ), outerPaint);
+      canvas.drawRect(
+        RRect.fromRectAndRadius(
+                innerRect,
+                Radius.circular(5.0), // Adjust the radius value as needed
+      ), innerPaint);
+      canvas.drawRect(
+        RRect.fromRectAndRadius(
+                dotRect,
+                Radius.circular(1.0), // Adjust the radius value as needed
+      ), dotPaint);
     } else {
       final roundedOuterStrokeRect =
           RRect.fromRectAndRadius(outerRect, Radius.circular(radius));

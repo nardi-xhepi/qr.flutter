@@ -60,7 +60,7 @@ enum QrDataModuleShape {
 @immutable
 class QrEyeStyle {
   /// Create a new set of styling options for QR Eye.
-  const QrEyeStyle({this.eyeShape, this.color, this.eyeBorderRadius});
+  const QrEyeStyle({this.eyeShape, this.color, this.eyeBorderRadius = 0});
 
   /// Eye shape.
   final QrEyeShape? eyeShape;
