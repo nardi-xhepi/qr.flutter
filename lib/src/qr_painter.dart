@@ -373,7 +373,7 @@ class QrPainter extends CustomPainter {
     }
 
     final outerRect =
-        Rect.fromLTWH(offset.dx, offset.dy, radius, radius);
+        Rect.fromLTWH(offset.dx, offset.dy, 10, 10);
 
     final innerRadius = radius - (2 * metrics.pixelSize);
     final innerRect = Rect.fromLTWH(
