@@ -261,12 +261,14 @@ class QrPainter extends CustomPainter {
         top = paintMetrics.inset + (y * (paintMetrics.pixelSize + gap));
         var pixelHTweak = 0.0;
         var pixelVTweak = 0.0;
+        /*
         if (gapless && _hasAdjacentHorizontalPixel(x, y, _qr!.moduleCount)) {
           pixelHTweak = 0.5;
         }
         if (gapless && _hasAdjacentVerticalPixel(x, y, _qr!.moduleCount)) {
           pixelVTweak = 0.5;
         }
+        */
         final squareRect = Rect.fromLTWH(
           left,
           top,
