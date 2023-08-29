@@ -199,7 +199,7 @@ class QrPainter extends CustomPainter {
 
     // Create the global gradient
     final Gradient globalGradient = LinearGradient(
-      colors: [Colors.blue, Colors.green], // Define your gradient colors here
+      colors:  [Color(0xFF000000), Color(0xFFFFFFFF)], // Define your gradient colors here
       begin: Alignment.topLeft,
       end: Alignment.bottomRight,
     );
