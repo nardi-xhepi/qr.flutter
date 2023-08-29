@@ -118,7 +118,7 @@ class QrPainter extends CustomPainter {
   late final int _calcVersion;
 
   /// The size of the 'gap' between the pixels
-  final double _gapSize = 0.25;
+  final double _gapSize = 0;
 
   /// Cache for all of the [Paint] objects.
   final PaintCache _paintCache = PaintCache();
@@ -261,14 +261,12 @@ class QrPainter extends CustomPainter {
         top = paintMetrics.inset + (y * (paintMetrics.pixelSize + gap));
         var pixelHTweak = 0.0;
         var pixelVTweak = 0.0;
-        /*
         if (gapless && _hasAdjacentHorizontalPixel(x, y, _qr!.moduleCount)) {
           pixelHTweak = 0.5;
         }
         if (gapless && _hasAdjacentVerticalPixel(x, y, _qr!.moduleCount)) {
           pixelVTweak = 0.5;
         }
-        */
         final squareRect = Rect.fromLTWH(
           left,
           top,
