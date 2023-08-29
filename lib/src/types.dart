@@ -69,7 +69,7 @@ class QrEyeStyle {
   final Color? color;
 
   /// External Border radius of the eye.
-  final double? eyeBorderRadius;
+  final double eyeBorderRadius;
 
   @override
   int get hashCode => eyeShape.hashCode ^ color.hashCode;
