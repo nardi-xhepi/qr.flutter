@@ -142,6 +142,8 @@ class QrEmbeddedImageStyle {
     this.safeArea = false,
     this.borderRadius = 0,
     this.embeddedImageShape = EmbeddedImageShape.none,
+    this.safeAreaMultiplier = 0.8,
+    this.shapeColor,
   });
 
   /// The size of the image. If one dimension is zero then the other dimension
@@ -155,6 +157,8 @@ class QrEmbeddedImageStyle {
   final bool safeArea;
   final double borderRadius;
   final EmbeddedImageShape embeddedImageShape;
+  final double safeAreaMultiplier;
+  final Color? shapeColor;
 
   /// Check to see if the style object has a non-null, non-zero size.
   bool get hasDefinedSize => size != null && size!.longestSide > 0;
