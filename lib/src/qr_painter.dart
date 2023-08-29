@@ -275,6 +275,8 @@ class QrPainter extends CustomPainter {
             }
             break;
           case EmbeddedImageShape.circle:
+              final customPaint = Paint()
+                                  ..color = embeddedImageStyle.shapeColor;
             final roundedRect = RRect.fromRectAndRadius(squareRect,
                 Radius.circular(squareRect.width / 2));
             canvas.drawRRect(roundedRect, paint);
