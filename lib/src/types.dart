@@ -59,6 +59,9 @@ enum QrDataModuleShape {
 /// Enumeration representing the shape of embedded image.
 /// This is used to determine how to clip the image.
 enum EmbeddedImageShape {
+  /// Use none 
+  none,
+
   /// Use square image.
   square,
 
@@ -138,7 +141,7 @@ class QrEmbeddedImageStyle {
     this.color,
     this.safeArea = false,
     this.borderRadius = 0,
-    this.embeddedImageShape,
+    this.embeddedImageShape = EmbeddedImageShape.none,
   });
 
   /// The size of the image. If one dimension is zero then the other dimension
@@ -151,7 +154,7 @@ class QrEmbeddedImageStyle {
 
   final bool safeArea;
   final double borderRadius;
-  final EmbeddedImageShape? embeddedImageShape;
+  final EmbeddedImageShape embeddedImageShape;
 
   /// Check to see if the style object has a non-null, non-zero size.
   bool get hasDefinedSize => size != null && size!.longestSide > 0;
