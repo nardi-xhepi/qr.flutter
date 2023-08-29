@@ -274,23 +274,8 @@ class QrPainter extends CustomPainter {
           paintMetrics.pixelSize + pixelVTweak,
         );
 
-        final gradientColors = [
-          Color(0xFF000000), // Start color, adjust as needed
-          Color(0xFFFFFFFF), // End color, adjust as needed
-        ];
-
-        // Create a linear gradient based on x and y positions
-        final gradient = LinearGradient(
-          colors: gradientColors,
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        );
-
-        // Create a Paint instance with the gradient
-        final gradientPaint = Paint()..shader = gradient.createShader(squareRect);
-
         if (dataModuleStyle.dataModuleShape == QrDataModuleShape.square) {
-          canvas.drawRect(squareRect, gradientPaint);
+          canvas.drawRect(squareRect, paint);
         } else {
           final roundedRect = RRect.fromRectAndRadius(
             squareRect,
