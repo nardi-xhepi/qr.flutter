@@ -396,17 +396,17 @@ class QrPainter extends CustomPainter {
       canvas.drawRRect(
         RRect.fromRectAndRadius(
                 outerRect,
-                Radius.circular(10.0), // Adjust the radius value as needed
+                Radius.circular(eyeStyle.eyeBorderRadius), // Adjust the radius value as needed
       ), outerPaint);
       canvas.drawRRect(
         RRect.fromRectAndRadius(
                 innerRect,
-                Radius.circular(5.0), // Adjust the radius value as needed
+                Radius.circular(eyeStyle.eyeBorderRadius/2), // Adjust the radius value as needed
       ), innerPaint);
       canvas.drawRRect(
         RRect.fromRectAndRadius(
                 dotRect,
-                Radius.circular(1.0), // Adjust the radius value as needed
+                Radius.circular(eyeStyle.eyeBorderRadius/4), // Adjust the radius value as needed
       ), dotPaint);
     } else {
       final roundedOuterStrokeRect =
