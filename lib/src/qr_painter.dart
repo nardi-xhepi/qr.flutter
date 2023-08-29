@@ -197,18 +197,6 @@ class QrPainter extends CustomPainter {
       return;
     }
 
-    // Create the global gradient
-    final Gradient globalGradient = LinearGradient(
-      colors:  [Color(0xFF000000), Color(0xFFFFFFFF)], // Define your gradient colors here
-      begin: Alignment.topLeft,
-      end: Alignment.bottomRight,
-    );
-
-    // Draw the gradient background
-    final backgroundPaint = Paint()..shader = globalGradient.createShader(Rect.fromLTWH(0, 0, size.width, size.height));
-    canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), backgroundPaint);
-
-
     final paintMetrics = _PaintMetrics(
       containerSize: size.shortestSide,
       moduleCount: _qr!.moduleCount,
@@ -285,9 +273,6 @@ class QrPainter extends CustomPainter {
           paintMetrics.pixelSize + pixelHTweak,
           paintMetrics.pixelSize + pixelVTweak,
         );
-
-        final gradient = globalGradient.createShader(squareRect);
-        paint.shader = gradient;
 
         if (dataModuleStyle.dataModuleShape == QrDataModuleShape.square) {
           canvas.drawRect(squareRect, paint);
