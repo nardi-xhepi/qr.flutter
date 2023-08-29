@@ -398,12 +398,12 @@ class QrPainter extends CustomPainter {
                 outerRect,
                 Radius.circular(10.0), // Adjust the radius value as needed
       ), outerPaint);
-      canvas.drawRect(
+      canvas.drawRRect(
         RRect.fromRectAndRadius(
                 innerRect,
                 Radius.circular(5.0), // Adjust the radius value as needed
       ), innerPaint);
-      canvas.drawRect(
+      canvas.drawRRect(
         RRect.fromRectAndRadius(
                 dotRect,
                 Radius.circular(1.0), // Adjust the radius value as needed
