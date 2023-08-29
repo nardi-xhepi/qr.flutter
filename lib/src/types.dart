@@ -90,6 +90,9 @@ class QrDataModuleStyle {
   const QrDataModuleStyle({
     this.dataModuleShape,
     this.color,
+    this.borderRadius = 0,
+    this.roundedOutsideCorners = false,
+    this.outsideBorderRadius = 0,
   });
 
   /// Eye shape.
@@ -97,6 +100,12 @@ class QrDataModuleStyle {
 
   /// Color to tint the data modules.
   final Color? color;
+
+  final double borderRadius;
+
+  final bool roundedOutsideCorners;
+
+  final double outsideBorderRadius;
 
   @override
   int get hashCode => dataModuleShape.hashCode ^ color.hashCode;
