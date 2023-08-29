@@ -60,13 +60,16 @@ enum QrDataModuleShape {
 @immutable
 class QrEyeStyle {
   /// Create a new set of styling options for QR Eye.
-  const QrEyeStyle({this.eyeShape, this.color});
+  const QrEyeStyle({this.eyeShape, this.color, this.eyeBorderRadius});
 
   /// Eye shape.
   final QrEyeShape? eyeShape;
 
   /// Color to tint the eye.
   final Color? color;
+
+  /// External Border radius of the eye.
+  final double? eyeBorderRadius;
 
   @override
   int get hashCode => eyeShape.hashCode ^ color.hashCode;
