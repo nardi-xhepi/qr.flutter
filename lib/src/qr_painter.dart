@@ -395,7 +395,7 @@ class QrPainter extends CustomPainter {
     );
 
     if (eyeStyle.eyeShape == QrEyeShape.square) {
-      canvas.drawRect(outerRect, outerPaint);
+      canvas.drawRRect(outerRect, outerPaint);
       canvas.drawRect(innerRect, innerPaint);
       canvas.drawRect(dotRect, dotPaint);
     } else {
